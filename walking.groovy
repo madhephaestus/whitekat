@@ -42,7 +42,7 @@ double stepOverHeight=7.5;
 	long walkingTimeout =stepCycleTime*2
 	int numStepCycleGroups = 2
 	
-	double standardHeadTailAngle = -20
+	double standardHeadTailAngle = -15
 	double staticPanOffset = 30
 	double coriolisGain = 1.1
 	boolean headStable = true
