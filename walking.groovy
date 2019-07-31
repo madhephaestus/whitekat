@@ -44,7 +44,7 @@ double stepOverHeight=7.5;
 	
 	double standardHeadTailAngle = -15
 	double staticPanOffset = 30
-	double coriolisGain = 1.1
+	double coriolisGain = 0.5
 	boolean headStable = true
 	double maxBodyDisplacementPerStep = 40
 	double minBodyDisplacementPerStep = 30
