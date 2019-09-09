@@ -1,7 +1,7 @@
 def cat =ScriptingEngine.gitScriptRun(	"https://github.com/OperationSmallKat/SmallKat_V2.git", 
 								"loadRobot.groovy", 
-["https://github.com/OperationSmallKat/greycat.git",
-		"MediumKat.xml","GameController_22","hidDevice"]);
+								["https://github.com/OperationSmallKat/greycat.git",
+								"MediumKat.xml","hidDevice","hidDevice"]);
 println "Cat loaded, searching for game controller"
 def gameController =null
 try{
@@ -9,17 +9,23 @@ try{
 	            "https://gist.github.com/e26c0d8ef7d5283ef44fb22441a603b8.git", // git location of the library
 	            "LoadGameController.groovy" , // file to load
 	            // Parameters passed to the function
-	            ["GameController_22"]
+	            ["hidDevice"]
 	            );
-}catch (Exception ex){
+      println "Hello"
+}catch (Exception ex) {
+	// TODO Prints to stderr. Terminal inside bowler doesn't see it.
+	println "Got exception!"
 	ex.printStackTrace()
-	return
 }
+
 if(gameController==null){
 	println "Exiting script"
 	return 
 }
-int [] data = gameController.getData() 
+println "Connected!!"
+
+//int [] data = 
+gameController.getData() 
 double toSeconds=0.01//100 ms for each increment
 println "Starting controller loop..."
 while (!Thread.interrupted() ){
