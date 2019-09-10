@@ -11,15 +11,17 @@ try{
 	            // Parameters passed to the function
 	            ["GameController_22"]
 	            );
-      println "Hello"
+      println "Game controller instantiated"
 }catch (Exception ex) {
+	println "Game controller instantiation exception!"
 	// TODO Prints to stderr. Terminal inside bowler doesn't see it.
-	println "Got exception!"
 	ex.printStackTrace()
+	// Alternately
+	println("Exception: ${ex}")
 }
 
 if(gameController==null){
-	println "Exiting script"
+	println "Null game controller. Exiting script"
 	return 
 }
 println "Connected!!"
